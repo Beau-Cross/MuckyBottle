@@ -24,8 +24,32 @@ h1 {
     font-weight: 200;
 }
 .img-responsive {
-    width: 50vw;
+    width: 18vw;
 }
+
+$navsize: 6%;
 .navbar {
     background-color: $secondary-color;
+    height: $navsize;
+}
+.navButton {
+    width: 100%;
+    font-family: $general-font;
+    font-weight: 900;
+    font-size: 3vw;
+    padding: 6%;
+}
+@media screen and (min-width: 1024px){
+    .navbar {
+        height: 74px;
+    }
+    .navButton {
+        font-size: 30.7px; 
+    }
+    .img-responsive {
+        width: 184px;
+    }
+}
+.fill-remaining {
+    flex: 1 1 auto;
 }

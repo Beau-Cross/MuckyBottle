@@ -1,15 +1,22 @@
+<div>
 <h2>Add a recyclable object below!</h2>
 <div>
   <label>Object name:
-    <input [(ngModel)]="recyclable.name" placeholder="Recyclable Object">
+    <input #objectName />
   </label>
   <label>Object weight(lbs):
-    <input [(ngModel)]="recyclable.weightlbs" placeholder = "Object Weight">
+    <input #objectWeight />
   </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(objectName.value, objectWeight.value); objectName.value=''; objectWeight">
+    submit
+  </button>
 </div>
+
 <h2> List of total objects:</h2>
 <ul>
   <li *ngFor="let recyclable1 of recyclablesArray">
-    <span class="badge">{{recyclable1.name}}</span> {{recyclable1.weightlbs}} {{recyclable1.weightkg}}
+    <span class="badge">You recycled {{recyclable1.weightlbs}} lbs ({{recyclable1.weightkg}} kgs) of {{recyclable1.name}}!!</span>  
   </li>
 </ul>
+<

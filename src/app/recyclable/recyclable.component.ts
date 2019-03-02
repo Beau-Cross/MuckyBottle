@@ -9,13 +9,21 @@ import { RECYCLABLES } from './mock-recyclable'
 })
 export class RecyclableComponent implements OnInit 
 {
+  recyclablesArray: recyclable[];
   recyclable : recyclable = {
     name : "",
     weightkg : 0,
     weightlbs : 0
   }
-  recyclablesArray = RECYCLABLES;
-  constructor() { }
+  
+  constructor() {
+    this.recyclablesArray = RECYCLABLES;
+  }
+
+  add(private r: string, private rW: number) {
+    const rec = new recyclable(r, rW);
+    this.recyclablesArray.push(rec);
+  }
 
   ngOnInit() 
   {
