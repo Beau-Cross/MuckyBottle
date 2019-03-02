@@ -29,6 +29,7 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule
   ],
   exports: [
+    MatToolbarModule,
     MatButtonModule,
     MatCheckboxModule
   ],
