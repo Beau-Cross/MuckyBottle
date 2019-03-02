@@ -12,6 +12,8 @@ export class RecyclableComponent implements OnInit
   recyclablesArray: recyclable[];
   totalweight : number = 0;
   totalweightkg : number = 0;
+  activateLevel : boolean = false;
+  level : number = 1;
   recyclable : recyclable = {
     name : "",
     weightkg : 0,
@@ -27,6 +29,17 @@ export class RecyclableComponent implements OnInit
     const rec = new recyclable(r, rW);
     this.recyclablesArray.push(rec);
     this.totalWeight(rec);
+
+    if(this.totalweight >= 5) {
+      this.activateLevel = true;
+      if(this.totalweight >= 10 ) this.level = 2;
+      if(this.totalweight >= 15 ) this.level = 3;
+      if(this.totalweight >= 20 ) this.level = 4;
+      if(this.totalweight >= 30 ) {
+        this.level = 5;
+      }
+    }
+
   }
   totalWeight(a: recyclable)
   {
@@ -42,6 +55,8 @@ export class RecyclableComponent implements OnInit
 
       
     this.totalweightkg = (+this.totalweight * 0.453592);
+
+
   }
 
 }

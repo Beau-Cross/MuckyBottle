@@ -20,6 +20,10 @@
 
 		<h3 style="padding-bottom: 20%;">Total weight recycled: {{ totalweight}} lbs ({{ totalweightkg | number : '1.2-2'}} kgs)  </h3>
 	</div>
+
+	<div class="level col-md-6" *ngIf="activateLevel==true">
+		<h2>You are a Level {{level}} Recycler!</h2>
+	</div>
 </div>
 
 

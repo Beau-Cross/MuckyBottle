@@ -38,4 +38,14 @@
 			text-align: left;
 		}
 	}
+
+	.level {
+		text-align: center;
+		padding-right: 165px;
+		padding-left: 165px;
+		float: left;
+		margin-top: 50px;
+		background-color: rgba(0, 0, 0, $alpha: 0.1);
+		border-radius: 6px;
+	}
 }
