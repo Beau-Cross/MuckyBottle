@@ -9,6 +9,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { SamplePhrasesComponent } from './sample-phrases/sample-phrases.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SamplePhrasesComponent } from './sample-phrases/sample-phrases.componen
     BrowserAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
-    MatToolbarModule
+    MatToolbarModule,
+    AppRoutingModule
   ],
   exports: [
     MatButtonModule,
