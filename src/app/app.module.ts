@@ -6,14 +6,12 @@ import { AppComponent } from './app.component';
 import { RecyclableComponent } from './recyclable/recyclable.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatTableModule, MatFormFieldModule, MatInputModule, MatPaginatorModule, MatCardModule, MatGridListModule } from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatTableModule, MatFormFieldModule, MatInputModule, MatPaginatorModule, MatCardModule, MatGridListModule, MatTabsModule } from '@angular/material';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { SamplePhrasesComponent } from './sample-phrases/sample-phrases.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { StatsComponent } from './stats/stats.component';
-
-
 
 @NgModule({
   declarations: [
@@ -36,7 +34,8 @@ import { StatsComponent } from './stats/stats.component';
     MatInputModule,
     MatPaginatorModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatTabsModule
   ],
   exports: [
     MatToolbarModule,
