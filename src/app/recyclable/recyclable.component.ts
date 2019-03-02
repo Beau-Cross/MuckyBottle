@@ -10,7 +10,6 @@ import { RECYCLABLES } from './mock-recyclable'
 export class RecyclableComponent implements OnInit 
 {
   recyclablesArray: recyclable[];
-  today: number = Date.now();
   totalweight : number = 0;
   totalweightkg : number = 0;
   recyclable : recyclable = {
@@ -24,7 +23,7 @@ export class RecyclableComponent implements OnInit
   }
 
   add(r: string, rW: number) {
-    const rec = new recyclable(r, rW);
+    const rec = new recyclable(r, rW, Date.now());
     this.recyclablesArray.push(rec);
     this.totalWeight(rec);
   }
