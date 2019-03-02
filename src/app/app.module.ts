@@ -10,12 +10,14 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { SamplePhrasesComponent } from './sample-phrases/sample-phrases.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RecyclableComponent,
-    SamplePhrasesComponent
+    SamplePhrasesComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

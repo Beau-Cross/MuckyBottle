@@ -4,25 +4,12 @@
     <img class="img-responsive" src="assets/images/BottleCropped.jpg">
   </div>
   
-  <span class="fill-remaining"><button mat-button class="navButton">Home</button></span>
-  <span class="fill-remaining"><button mat-button class="navButton">Stats</button></span>
-  <span class="fill-remaining"><button mat-button class="navButton">My Recycling</button></span>
-  <span class="fill-remaining"><button mat-button class="navButton">Phrases</button></span>
+  <span class="fill-remaining"><button mat-button class="navButton" routerLink="" >Home</button></span>
+  <span class="fill-remaining"><button mat-button class="navButton" routerLink="/heroes">Stats</button></span>
+  <span class="fill-remaining"><button mat-button class="navButton" routerLink="/myrecycling">My Recycling</button></span>
+  <span class="fill-remaining"><button mat-button class="navButton" routerLink="/sample-phrases" >Phrases</button></span>
 </mat-toolbar>
-<app-recyclable></app-recyclable>
 
-<h1 style="text-align:center">About Us</h1>
-<ul style="list-style: none" class="IntroText">
-  <span><li class="AboutText">MuckyBottle is a multi-platform software inteded to work on a web-browser or Google Home. With convenience as the forefront design philosophy, information about the recycling process is a spoken word away! </li></span>
-</ul>
-<br>
-<br>
-<br>
-<br>
-<h1 style="text-align: center">How to get involved</h1>
-<h2 style="text-align: center">Begin by checking out the sample phrases you can ask the Mucky <span><div style="color: green">Bot</div></span>tle</h2>
-<h2 style="text-align: center">Add your recycled material into the global database</h2>
-<h2 style="text-align: center">Take pride in knowing you are preventing Mucky Bottles everywhere!</h2>
-<ul style="list-style: none" class="IntroText">
-  <li class="AboutText"></li>
-</ul>
+<router-outlet></router-outlet>
+
+
