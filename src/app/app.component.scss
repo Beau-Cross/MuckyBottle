@@ -10,20 +10,7 @@ span {
     vertical-align: middle;
 }
 h1 {
-    font-family: $general-font;
-}
-.IntroText {
-    border-radius: 20px;
-    height: 9vw;
-    background-color: rgba($main-color, $alpha: 0.3);
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.1);
-}
-.AboutText {
-    margin: 0 auto;
-    width: 75%;
-    font-size: 3vw;
-    font-family: $general-font;
-    font-weight: 200;
+    font-family: $navbar-font;
 }
 .img-responsive {
     width: 18vw;
@@ -31,23 +18,20 @@ h1 {
 
 $navsize: 6%;
 .navbar {
-    background-color: rgba(0, 0, 0, $alpha: 0.1);
     height: $navsize;
 }
 .navButton {
     width: 100%;
     font-family: $navbar-font;
     font-weight: 200;
-    font-size: 3vw;
-    padding: 6%;
 }
 @media screen and (min-width: 1024px){
     .navbar {
         height: 74px;
     }
     .navButton {
-        font-size: 30.7px; 
-        padding: 13.55px;
+        font-size: 15px; 
+        padding: 10px;
     }
     .img-responsive {
         width: 184px;
