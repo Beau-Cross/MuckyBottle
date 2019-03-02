@@ -6,18 +6,20 @@ import { AppComponent } from './app.component';
 import { RecyclableComponent } from './recyclable/recyclable.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatTableModule, MatFormFieldModule, MatInputModule, MatPaginatorModule, MatCardModule, MatGridListModule, MatTabsModule } from '@angular/material';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { SamplePhrasesComponent } from './sample-phrases/sample-phrases.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
+import { StatsComponent } from './stats/stats.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RecyclableComponent,
     SamplePhrasesComponent,
-    HomeComponent
+    HomeComponent,
+    StatsComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,14 @@ import { HomeComponent } from './home/home.component';
     MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatPaginatorModule,
+    MatCardModule,
+    MatGridListModule,
+    MatTabsModule
   ],
   exports: [
     MatToolbarModule,

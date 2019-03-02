@@ -1,25 +1,36 @@
-<div>
-<h2>Add a recyclable object below!</h2>
-<div>
-  <label>Object name:
-    <input #objectName />
-  </label>
-  <label>Object weight(lbs):
-    <input #objectWeight />
-  </label>
-  <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(objectName.value, objectWeight.value); objectName.value=''; objectWeight;">
-    submit
-  </button>
+<div class="container">
+
+<div class="level" *ngIf="activateLevel==true">
+	<mat-card>
+	<mat-card-title>You are a Level {{level}} Recycler!</mat-card-title>
+	</mat-card>
 </div>
 
-<h2> List of total objects:</h2>
-<ul>
-  <li *ngFor="let recyclable1 of recyclablesArray">
-    <span class="badge">At {{recyclable1.time | date:'medium' }}, you recycled {{recyclable1.weightlbs}} lbs ({{recyclable1.weightkg | number : '1.2-2'}} kgs) of {{recyclable1.name}}!!</span>  
-  </li>
-</ul>
-
-<h3 style="padding-bottom: 20%;">Total weight recycled: {{ totalweight}} lbs ({{ totalweightkg | number : '1.2-2'}} kgs)  </h3>
+<mat-grid-list cols="2" rowHeight="400px">
+  <mat-grid-tile>
+		<mat-card class="inputs">
+			<mat-card-title>What have you recycled today?</mat-card-title>
+			<mat-card-content>
+			    <input placeholder="object name" #objectName />
+			    <input placeholder="object weight(lbs)" #objectWeight />
+			  <button (click)="add(objectName.value, objectWeight.value); objectName.value=''; objectWeight.value='';">submit</button>
+			</mat-card-content>
+		</mat-card>
+	</mat-grid-tile>
+	<mat-grid-tile>
+		<mat-card class="results">
+			<mat-card-title>List of total objects</mat-card-title>
+			<mat-card-content>
+				<ul>
+				  <li *ngFor="let recyclable1 of recyclablesArray">
+				    <span class="badge">At {{recyclable1.time | date:'medium' }}, you recycled {{recyclable1.weightlbs}} lbs ({{recyclable1.weightkg | number : '1.2-2'}} kgs) of {{recyclable1.name}}!!</span>  
+				  </li>
+				</ul>
+				<h3>Total weight recycled: {{ totalweight}} lbs ({{ totalweightkg | number : '1.2-2'}} kgs)</h3>
+			</mat-card-content>
+		</mat-card>
+	</mat-grid-tile>
+ </mat-grid-list>
+</div>
 
 

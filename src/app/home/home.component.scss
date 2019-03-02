@@ -2,8 +2,15 @@
 @import "src/styles.scss";
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-$general-font:  Arial, Helvetica, sans-seif;
-$navbar-font: 'Roboto', sans-serif;
+$general-font:  'Roboto', sans-seif;
+
+.card {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    text-align: center;
+}
 
 span {
     display: inline-block;
@@ -11,7 +18,7 @@ span {
 }
 h1 {
     font-family: $general-font;
-    font-size: 40.91px;
+    font-weight: 300;
 }
 .IntroText {
     border-radius: 20px;
