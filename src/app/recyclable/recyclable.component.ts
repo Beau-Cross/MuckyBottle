@@ -10,6 +10,7 @@ import { RECYCLABLES } from './mock-recyclable'
 export class RecyclableComponent implements OnInit 
 {
   recyclablesArray: recyclable[];
+  today: number = Date.now();
   recyclable : recyclable = {
     name : "",
     weightkg : 0,
@@ -25,9 +26,6 @@ export class RecyclableComponent implements OnInit
     this.recyclablesArray.push(rec);
   }
 
-  ngOnInit() 
-  {
-    console.log(this.recyclablesArray);
-  }
+  ngOnInit() { }
 
 }

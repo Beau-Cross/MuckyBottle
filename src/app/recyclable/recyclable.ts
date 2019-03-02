@@ -9,7 +9,6 @@ export class recyclable
    public weightkg: number;
 
 
-
     constructor(theName: string, theWeight: number) 
     {
         this.name = theName;
