@@ -15,7 +15,8 @@ export class RecyclableComponent implements OnInit
   recyclable : recyclable = {
     name : "",
     weightkg : 0,
-    weightlbs : 0
+    weightlbs : 0,
+    time : Date.now()
   }
   
   constructor() {
@@ -23,7 +24,7 @@ export class RecyclableComponent implements OnInit
   }
 
   add(r: string, rW: number) {
-    const rec = new recyclable(r, rW, Date.now());
+    const rec = new recyclable(r, rW);
     this.recyclablesArray.push(rec);
     this.totalWeight(rec);
   }

@@ -7,7 +7,7 @@ export class recyclable
    public name: string;
    public weightlbs: number;
    public weightkg: number;
-   public time: Date;
+   public time: number;
 
 
     constructor(theName: string, theWeight: number) 
