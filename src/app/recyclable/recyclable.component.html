@@ -8,7 +8,7 @@
     <input #objectWeight />
   </label>
   <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(objectName.value, objectWeight.value); objectName.value=''; objectWeight">
+  <button (click)="add(objectName.value, objectWeight.value); objectName.value=''; objectWeight;">
     submit
   </button>
 </div>
@@ -16,7 +16,10 @@
 <h2> List of total objects:</h2>
 <ul>
   <li *ngFor="let recyclable1 of recyclablesArray">
-    <span class="badge">You recycled {{recyclable1.weightlbs}} lbs ({{recyclable1.weightkg}} kgs) of {{recyclable1.name}}!!</span>  
+    <span class="badge">You recycled {{recyclable1.weightlbs}} lbs ({{recyclable1.weightkg | number : '1.2-2'}} kgs) of {{recyclable1.name}}!!</span>  
   </li>
 </ul>
-<
+
+<h3>Total weight recycled: {{totalweight}} lbs  </h3>
+<h3>Total weight recycled but European: {{totalweightkg | number : '1.2-2'}} kg</h3>
+
