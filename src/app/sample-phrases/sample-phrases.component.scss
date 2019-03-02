@@ -8,13 +8,22 @@
 	ul {
 		text-align: left;
 	}
-	.eng, .esp {
-		padding: 30px;
-		margin: 20px 400px 20px 400px;
-		font-size: 15px;
-		background-color: rgba(0, 0, 0, $alpha: 0.1);
+	.google {
+		margin-top: 30px;
+		text-align: center;
+		float: center;
+		margin-right: auto;
+		margin-left: auto;
 	}
+
 }
+.eng, .esp {
+		text-align: center;
+		margin-top: auto;
+		margin-bottom: auto;
+		padding: 80px;
+		float: left;
+	}
 
 .sample
 {
