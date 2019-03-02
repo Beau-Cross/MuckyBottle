@@ -20,7 +20,7 @@ export class RecyclableComponent implements OnInit
     this.recyclablesArray = RECYCLABLES;
   }
 
-  add(private r: string, private rW: number) {
+  add(r: string, rW: number) {
     const rec = new recyclable(r, rW);
     this.recyclablesArray.push(rec);
   }
