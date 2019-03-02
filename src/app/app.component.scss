@@ -1,7 +1,9 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "src/styles.scss";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
-$general-font:  Arial, Helvetica, sans-seif;
+$general-font:  Arial, Helvetica, sans-serif;
+$navbar-font: 'Roboto', sans-serif;
 
 span {
     display: inline-block;
@@ -13,7 +15,7 @@ h1 {
 .IntroText {
     border-radius: 20px;
     height: 9vw;
-    background-color: rgba($color: #000000, $alpha: 0.3);
+    background-color: rgba($main-color, $alpha: 0.3);
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.1);
 }
 .AboutText {
@@ -29,13 +31,13 @@ h1 {
 
 $navsize: 6%;
 .navbar {
-    background-color: $secondary-color;
+    background-color: rgba(0, 0, 0, $alpha: 0.1);
     height: $navsize;
 }
 .navButton {
     width: 100%;
-    font-family: $general-font;
-    font-weight: 900;
+    font-family: $navbar-font;
+    font-weight: 200;
     font-size: 3vw;
     padding: 6%;
 }
