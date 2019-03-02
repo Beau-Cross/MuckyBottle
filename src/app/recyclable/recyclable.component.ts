@@ -27,8 +27,10 @@ export class RecyclableComponent implements OnInit
 
   add(r: string, rW: number) {
     const rec = new recyclable(r, rW);
-    this.recyclablesArray.push(rec);
-    this.totalWeight(rec);
+    if(r != '' && rW > 0){
+		this.recyclablesArray.push(rec);
+		this.totalWeight(rec);
+	}
 
     if(this.totalweight >= 5) {
       this.activateLevel = true;

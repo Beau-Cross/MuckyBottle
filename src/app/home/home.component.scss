@@ -1,5 +1,6 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "src/styles.scss";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 $general-font:  'Roboto', sans-seif;
 
@@ -9,6 +10,9 @@ $general-font:  'Roboto', sans-seif;
     margin-right: auto;
     max-width: 800px;
     text-align: center;
+}
+.left {
+    text-align: left;
 }
 
 span {
@@ -32,7 +36,7 @@ h1 {
     width: 85%;
     font-size: 3vw;
     font-family: $general-font;
-    font-weight: 200;
+    font-weight: 100;
 }
 .img-responsive {
     width: 18vw;
@@ -63,6 +67,11 @@ $navsize: 6%;
     }
     .AboutText {
         font-size: 30.7px;
+    }
+}
+@media screen and (max-width: 1024px){
+    h1 {
+        font-size: 4vw;
     }
 }
 .fill-remaining {
