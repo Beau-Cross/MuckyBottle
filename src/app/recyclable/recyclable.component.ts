@@ -11,7 +11,7 @@ export class RecyclableComponent implements OnInit
 {
   recyclablesArray: recyclable[];
   totalweight : number = 0;
-   totalweightkg : number = 0;
+  totalweightkg : number = 0;
   recyclable : recyclable = {
     name : "",
     weightkg : 0,
@@ -23,7 +23,7 @@ export class RecyclableComponent implements OnInit
   }
 
   add(r: string, rW: number) {
-    const rec = new recyclable(r, rW);
+    const rec = new recyclable(r, rW, Date.now());
     this.recyclablesArray.push(rec);
     this.totalWeight(rec);
   }
@@ -33,7 +33,6 @@ export class RecyclableComponent implements OnInit
       this.totalweightkg = (+this.totalweight * 0.453592);
   }
  
-
   ngOnInit() 
   {
     console.log(this.recyclablesArray);

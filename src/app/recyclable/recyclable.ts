@@ -7,7 +7,7 @@ export class recyclable
    public name: string;
    public weightlbs: number;
    public weightkg: number;
-
+   public time: Date;
 
 
     constructor(theName: string, theWeight: number) 
@@ -15,5 +15,6 @@ export class recyclable
         this.name = theName;
         this.weightlbs = theWeight;
         this.weightkg = theWeight * 0.453592;
+        this.time = Date.now();
     }
 }
