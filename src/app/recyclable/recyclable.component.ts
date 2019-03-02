@@ -10,12 +10,9 @@ import { RECYCLABLES } from './mock-recyclable'
 export class RecyclableComponent implements OnInit 
 {
   recyclablesArray: recyclable[];
-<<<<<<< HEAD
   today: number = Date.now();
-=======
   totalweight : number = 0;
-   totalweightkg : number = 0;
->>>>>>> 5df3f8d32987865c4f08f5314cb1fcb76c5ddc3e
+  totalweightkg : number = 0;
   recyclable : recyclable = {
     name : "",
     weightkg : 0,
@@ -37,10 +34,6 @@ export class RecyclableComponent implements OnInit
       this.totalweightkg = (+this.totalweight * 0.453592);
   }
  
-
-<<<<<<< HEAD
-  ngOnInit() { }
-=======
   ngOnInit() 
   {
     console.log(this.recyclablesArray);
@@ -50,6 +43,5 @@ export class RecyclableComponent implements OnInit
       
     this.totalweightkg = (+this.totalweight * 0.453592);
   }
->>>>>>> 5df3f8d32987865c4f08f5314cb1fcb76c5ddc3e
 
 }
