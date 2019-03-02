@@ -23,7 +23,7 @@
 			<mat-card-content>
 				<ul>
 				  <li *ngFor="let recyclable1 of recyclablesArray">
-				    <span class="badge">At {{recyclable1.time | date:'medium' }}, you recycled {{recyclable1.weightlbs}} lbs ({{recyclable1.weightkg | number : '1.2-2'}} kgs) of {{recyclable1.name}}!!</span>  
+				    <span class="badge">On {{recyclable1.time | date:'medium' }}, you recycled {{recyclable1.weightlbs}} lbs ({{recyclable1.weightkg | number : '1.2-2'}} kgs) of {{recyclable1.name}}!!</span>  
 				  </li>
 				</ul>
 				<h3>Total weight recycled: {{ totalweight}} lbs ({{ totalweightkg | number : '1.2-2'}} kgs)</h3>
